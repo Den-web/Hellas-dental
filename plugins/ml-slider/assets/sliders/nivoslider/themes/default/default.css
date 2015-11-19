@@ -1,0 +1,129 @@
+/*
+Skin Name: Nivo Slider Default Theme
+Skin URI: http://nivo.dev7studios.com
+Description: The default skin for the Nivo Slider.
+Version: 1.3
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+Supports Thumbs: true
+*/
+
+.theme-default .nivoSlider {
+
+    -webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    box-shadow: 0px 1px 5px 0px #4a4a4a;
+}
+.theme-default .nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+.theme-default .nivoSlider a {
+    border:0;
+    display:block;
+}
+
+.theme-default {
+    text-align: center;
+    width: 100%;
+    z-index: 99;
+}
+
+.nivo-controlNav{
+    position: absolute;
+    top: 400px;
+    left: 659px;
+    z-index: 10000;
+    padding: 0 0 0 0px;
+}
+.theme-default .nivo-controlNav a {
+    margin-left: 4px;
+    z-index: 10;
+    display:inline-block; 
+    height:10px; 
+    width:10px;
+    font-size:0;
+    line-height:0;
+    background:url(/wp-content/themes/twentythirteen/images/pagination.png) left top no-repeat;
+    _background:url(/wp-content/themes/twentythirteen/images/pagination.gif) left top no-repeat;
+}
+.theme-default .nivo-controlNav a.active {
+    float: left;
+    z-index: 100;
+    height: 10px; 
+    width: 10px;
+    font-size:0;
+    line-height:0;
+    background:url(/wp-content/themes/twentythirteen/images/pagination.png) left bottom no-repeat;
+    _background:url(/wp-content/themes/twentythirteen/images/pagination.gif) left bottom no-repeat;
+}
+
+.theme-default .nivo-controlNav a:hover {
+    float: left;
+    z-index: 100;
+    height: 10px; 
+    width: 10px;
+    font-size:0;
+    line-height:0;
+    background:url(/wp-content/themes/twentythirteen/images/pagination.png) left bottom no-repeat;
+    _background:url(/wp-content/themes/twentythirteen/images/pagination.gif) left bottom no-repeat;
+}
+
+.theme-default .nivo-directionNav a {
+    display:block;
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 85px;
+    z-index: 100;
+    background:url(/wp-content/themes/twentythirteen/images/controls-1.png) left top no-repeat;
+    text-indent:-9999px;
+    border:0;
+
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+.theme-default:hover .nivo-directionNav a { opacity: 1; }
+.theme-default a.nivo-nextNav {
+    background-position:-30px 0;
+    right:12%;
+}
+.theme-default a.nivo-prevNav {
+    left:12.2%;
+}
+
+.theme-default .nivo-caption {
+    height: 100px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 23px;
+    color: #91653E;
+    margin: 32px 0px 0px -222px;
+}
+.theme-default .nivo-caption a {
+    color:blue;
+
+}
+.theme-default .nivo-caption a:hover {
+
+    text-decoration: none;
+
+}
+
+.theme-default .nivo-controlNav.nivo-thumbs-enabled {
+    width: 100%;
+}
+.theme-default .nivo-controlNav.nivo-thumbs-enabled a {
+    width: auto;
+    height: auto;
+    background: none;
+    margin-bottom: 5px;
+}
+.theme-default .nivo-controlNav.nivo-thumbs-enabled img {
+    display: block;
+    height: auto;
+}

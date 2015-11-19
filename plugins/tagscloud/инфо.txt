@@ -1,0 +1,44 @@
+====================================
+Установка облака в боковую панель ==
+====================================
+
+----------------------------------------------------------------------------------------
+**при любых изменения файла  tagscloud.php удаляйте временные файлы 
+alltagscloud_ваш_шаблон.tmp  ,  tagscloud_ваш_шаблон.tmp  , tags_all_view_ваш_шаблон.tmp
+из директории engine/cache/  , иначе изменений вы НЕ УВИДИТЕ !!!! **
+----------------------------------------------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+1.копируем содержимое папки tagscloud в корень сайта
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+2.в файле main.tpl между тегами  <head> и </head> прописываем
+	<script type="text/javascript" src="http://САЙТ.РУ/engine/classes/tagcloud/swfobject.js"></script>	
+
+	
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+3.файле main.tpl добавляем 
+  
+    {include file="engine/modules/tagscloud2.php"}
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+4.удаляем временные файлы   alltagscloud_ваш_шаблон.tmp  ,  tagscloud_ваш_шаблон.tmp  из директории  engine/cache/
+
+  
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+6.немного о настройках:
+<script type="text/javascript"> 
+var tagcloud_cl = new SWFObject("/engine/classes/tagcloud/tagcloud.swf", "tagcloud", "ширина", "высота", "минимальная версия флешпроигрывателя", "цвет фона");
+var tagcloud_cl_temp = encodeURIComponent("<tags>***</tags>");
+tagcloud_cl.addParam("wmode", "transparent");	включаем прозрачный фон,если не нужно можно удалить					   
+tagcloud_cl.addVariable("tcolor", "0x4b73d4");  цвет шрифта
+tagcloud_cl.addVariable("tspeed", "100");
+tagcloud_cl.addVariable("distr", "true");
+tagcloud_cl.addVariable("mode", "tags");
+tagcloud_cl.addVariable("tagcloud", tagcloud_cl_temp);
+tagcloud_cl.write("cumuluscontent");
+</script>
+размеры шрифта в файле engine/modules/tagscloud.php в строке
+$sizes = array( "8pt", "11.5pt", "15pt", "18.5pt", "22pt" );
++++++++++++++++++++++++++++++++++++++++++++++++++++++
